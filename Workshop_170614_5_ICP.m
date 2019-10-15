@@ -68,7 +68,7 @@ subplot(212); imshow(RefTiles(:,:,3,1)*50); drawnow;
 % middle left and bottom left
 i = 2;
 [y,x] = ind2sub(size(VerticalPairs), i);
-ImRegFft(RefTiles(:,:,y,x), RefTiles(:,:,y+1,x), 's', o.CorrThresh, o.MinSize, 1);
+ImRegFft(RefTiles(:,:,y,x), RefTiles(:,:,y+1,x), 's', o.CorrThresh, o.MinSize);
 pause()
 
 % do for all
@@ -373,7 +373,7 @@ Codes = CharCode(BestCode);
 Genes = GeneName(BestCode);
 
 %% produce output figure
-figure;
-ShowMe = (MaxScore>.9);
-iss_make_figure(o, GlobalYX(ShowMe,:), Genes(ShowMe));
+% figure;
+% ShowMe = (MaxScore>.9);
+% iss_make_figure(o, GlobalYX(ShowMe,:), Genes(ShowMe));
 
